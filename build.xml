@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="yc92_9">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="yc92_9.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.osgi_3.10.102.v20160118-1700.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.core.commands_3.7.0.v20150422-0725.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.equinox.common_3.7.0.v20150402-1709.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.core.runtime_3.11.1.v20150903-1804.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.text_3.5.400.v20150505-1044.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.jface_3.11.1.v20160128-1644.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.jface.text_3.10.0.v20150603-1752.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar"/>
+        <pathelement location="../../eclipse/plugins/com.ibm.icu_54.1.1.v201501272100.jar"/>
+        <pathelement location="../../eclipse/plugins/org.eclipse.ui.forms_3.6.200.v20150506-2029.jar"/>
+        <pathelement location="ojdbc14.jar"/>
+        <pathelement location="jar/basicplayer3.0.jar"/>
+        <pathelement location="jar/jl1.0.jar"/>
+        <pathelement location="jar/mp3spi1.9.4.jar"/>
+        <pathelement location="jar/tritonus_share.jar"/>
+        <pathelement location="jar/javax.mail-1.6.0.jar"/>
+        <pathelement location="jar/ojdbc14.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="yc92_9.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>
