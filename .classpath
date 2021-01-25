@@ -14,13 +14,12 @@
 	<classpathentry kind="lib" path="D:/eclipse/plugins/org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar" sourcepath="D:/eclipse/plugins/org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar"/>
 	<classpathentry kind="lib" path="D:/eclipse/plugins/com.ibm.icu_54.1.1.v201501272100.jar" sourcepath="D:/eclipse/plugins/com.ibm.icu_54.1.1.v201501272100.jar"/>
 	<classpathentry kind="lib" path="D:/eclipse/plugins/org.eclipse.ui.forms_3.6.200.v20150506-2029.jar" sourcepath="D:/eclipse/plugins/org.eclipse.ui.forms_3.6.200.v20150506-2029.jar"/>
-	<classpathentry kind="lib" path="ojdbc14.jar"/>
 	<classpathentry kind="lib" path="jar/basicplayer3.0.jar"/>
 	<classpathentry kind="lib" path="jar/jl1.0.jar"/>
 	<classpathentry kind="lib" path="jar/mp3spi1.9.4.jar"/>
 	<classpathentry kind="lib" path="jar/tritonus_share.jar"/>
 	<classpathentry kind="lib" path="jar/javax.mail-1.6.0.jar"/>
 	<classpathentry kind="lib" path="jar/ojdbc14.jar"/>
-	<classpathentry kind="lib" path="swing2swt.jar"/>
+	<classpathentry kind="lib" path="jar/swing2swt.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
