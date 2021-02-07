@@ -20,7 +20,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Text;
 
 import com.nine.dao.DBHelper;
-import com.nine.util.myUtil;
+import com.nine.util.MyUtil;
 
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
@@ -42,7 +42,7 @@ public class Reg {
 	private Text text_3;
 	private Text text_4;
     private DBHelper db= new DBHelper();
-    private myUtil mu = new myUtil();
+    private MyUtil mu = new MyUtil();
 	private String code="";
 	private String photoFile="";
 
@@ -81,7 +81,7 @@ public class Reg {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setBackgroundMode(SWT.INHERIT_FORCE);
 		shell.setBackgroundImage(SWTResourceManager.getImage(Reg.class, "/images/background.jpg"));
 		shell.setSize(612, 641);

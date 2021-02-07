@@ -16,8 +16,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-import com.nine.ui.deleteAndeditorCp;
-import com.nine.ui.showCangpin1;
+import com.nine.ui.DeleteAndeditorCp;
+import com.nine.ui.ShowCangpin1;
 
 public class AutoGroup {
 	
@@ -66,7 +66,7 @@ public class AutoGroup {
 			public void mouseDown(MouseEvent e) {
 				label.setFont(SWTResourceManager.getFont("微软雅黑", 9, SWT.BOLD ));
 				label.setForeground(SWTResourceManager.getColor(SWT.COLOR_TRANSPARENT));
-				label.setBackgroundImage(SWTResourceManager.getImage(deleteAndeditorCp.class, "/images/background_right.jpg"));
+				label.setBackgroundImage(SWTResourceManager.getImage(DeleteAndeditorCp.class, "/images/background_right.jpg"));
 				label.setText( map.get("detail")+"");
 			}
 

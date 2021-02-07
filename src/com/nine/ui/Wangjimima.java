@@ -5,7 +5,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import com.nine.dao.DBHelper;
-import com.nine.util.myUtil;
+import com.nine.util.MyUtil;
 
 import org.eclipse.swt.widgets.Label;
 
@@ -33,7 +33,7 @@ public class Wangjimima {
 	private Text text_1;
 	private Text text_2;
 	private Text text_3;
-	private myUtil mu = new myUtil();
+	private MyUtil mu = new MyUtil();
     private String code="";
     private DBHelper db= new DBHelper();
 
@@ -71,7 +71,7 @@ public class Wangjimima {
 	protected void createContents() {
 		shell = new Shell();
 		shell.setBackgroundMode(SWT.INHERIT_FORCE);
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setBackgroundImage(SWTResourceManager.getImage(Wangjimima.class, "/images/background.jpg"));
 		shell.setSize(612, 641);
 		shell.setText("忘记密码");

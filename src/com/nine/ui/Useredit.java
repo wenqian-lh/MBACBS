@@ -22,7 +22,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import com.nine.dao.DBHelper;
 import com.nine.util.Data;
-import com.nine.util.myUtil;
+import com.nine.util.MyUtil;
 
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.events.MouseAdapter;
@@ -37,7 +37,7 @@ public class Useredit extends Index{
 	private Text text;
 	private Text text_1;
 	private Text text_2;
-	myUtil mu = new myUtil();
+	MyUtil mu = new MyUtil();
 	private Button button;
 
 	/**
@@ -75,7 +75,7 @@ public class Useredit extends Index{
 	protected void createContents() {
 		shell = new Shell();
 		shell.setBackgroundMode(SWT.INHERIT_FORCE);
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setBackgroundImage(SWTResourceManager.getImage(Useredit.class, "/images/background.jpg"));
 		shell.setFont(SWTResourceManager.getFont("楷体", 12, SWT.BOLD));
 		shell.setSize(392, 506);

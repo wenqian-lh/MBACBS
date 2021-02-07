@@ -1,32 +1,19 @@
 package com.nine.ui;
 
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Composite;
-
-import java.util.Date;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
-import org.eclipse.swt.custom.StackLayout;
-import org.eclipse.swt.layout.FormLayout;
-import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.layout.FormAttachment;
-import org.eclipse.wb.swt.SWTResourceManager;
-
-import com.ibm.icu.text.SimpleDateFormat;
-
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Tree;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.widgets.TreeItem;
-import org.eclipse.swt.events.MouseAdapter;
-import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeItem;
+import org.eclipse.wb.swt.SWTResourceManager;
 
-public class guanliyuan {
+public class GuanliYuancommon {
 
 	protected Shell shell;
 
@@ -36,7 +23,7 @@ public class guanliyuan {
 	 */
 	public static void main(String[] args) {
 		try {
-			guanliyuan window = new guanliyuan();
+			GuanliYuancommon window = new GuanliYuancommon();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +52,7 @@ public class guanliyuan {
 		shell = new Shell();
 		shell.setSize(761, 649);
 		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
-		shell.setText("超级管理员");
+		shell.setText("管理员");
 		shell.setBackgroundMode(SWT.INHERIT_FORCE);
 		shell.setLayout(new FillLayout(SWT.HORIZONTAL));
 		
@@ -102,15 +89,14 @@ public class guanliyuan {
 		treeItem_2.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
 		treeItem_2.setExpanded(true);
 		
-		TreeItem treeItem_6 = new TreeItem(treeItem, 0);
-		treeItem_6.setText("删除公告");
-		treeItem_6.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
-		treeItem_6.setExpanded(true);
+		TreeItem treeItem_3 = new TreeItem(treeItem, SWT.NONE);
+		treeItem_3.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
+		treeItem_3.setText("删除公告");
 		
-		TreeItem treeItem_7 = new TreeItem(treeItem, 0);
-		treeItem_7.setText("删除诗词");
-		treeItem_7.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
-		treeItem_7.setExpanded(true);
+		TreeItem treeItem_4 = new TreeItem(treeItem, 0);
+		treeItem_4.setText("删除诗词");
+		treeItem_4.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
+		treeItem_4.setExpanded(true);
 		treeItem.setExpanded(true);
 		
 		TreeItem trtmNewTreeitem = new TreeItem(tree, SWT.NONE);
@@ -139,19 +125,6 @@ public class guanliyuan {
 		trtmNewTreeitem_6.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
 		trtmNewTreeitem_6.setText("修改和删减展览");
 		trtmNewTreeitem_4.setExpanded(true);
-		
-		TreeItem treeItem_3 = new TreeItem(tree, SWT.NONE);
-		treeItem_3.setFont(SWTResourceManager.getFont("黑体", 13, SWT.BOLD));
-		treeItem_3.setText("管理员账号管理");
-		
-		TreeItem treeItem_4 = new TreeItem(treeItem_3, SWT.NONE);
-		treeItem_4.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
-		treeItem_4.setText("添加管理员");
-		
-		TreeItem treeItem_5 = new TreeItem(treeItem_3, SWT.NONE);
-		treeItem_5.setFont(SWTResourceManager.getFont("黑体", 10, SWT.BOLD));
-		treeItem_5.setText("删除管理员");
-		treeItem_3.setExpanded(true);
 		
 		Composite composite_2 = new Composite(sashForm, SWT.NONE);
 		composite_2.setBackgroundImage(SWTResourceManager.getImage(guanliyuan.class, "/images/background_6.jpg"));
@@ -209,12 +182,6 @@ public class guanliyuan {
 				}else if( ti.getText().equals("修改和删减展览") ){
 					DeleteAndeditorExhibition de = new DeleteAndeditorExhibition();
 					de.open();
-				}else if( ti.getText().equals("添加管理员") ){
-					AddGuanLiYuan agly = new AddGuanLiYuan();
-					agly.open();
-				}else if( ti.getText().equals("删除管理员") ){
-					Deleteguanliyuan dgly = new Deleteguanliyuan();
-					dgly.open();
 				}
 				
 			}

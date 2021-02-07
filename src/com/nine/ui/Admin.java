@@ -20,7 +20,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import com.nine.dao.DBHelper;
 import com.nine.util.Data;
-import com.nine.util.myUtil;
+import com.nine.util.MyUtil;
 
 //import swtl.Index;
 
@@ -41,7 +41,7 @@ public class Admin {
 	private Text text;
 	
 	private DBHelper db = new DBHelper();
-	private myUtil mu = new myUtil();
+	private MyUtil mu = new MyUtil();
 	
 	private Text text_1;
 	private Text text_2;
@@ -87,7 +87,7 @@ public class Admin {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setFont(SWTResourceManager.getFont("楷体", 12, SWT.BOLD));
 		shell.setBackgroundMode(SWT.INHERIT_FORCE);
 		shell.setBackgroundImage(SWTResourceManager.getImage(Admin.class, "/images/right.jpg"));
@@ -166,7 +166,7 @@ public class Admin {
 					shell.dispose();
 					gly.open();			
 				}else{
-					guanliyuan_common gc = new guanliyuan_common();
+					GuanliYuancommon gc = new GuanliYuancommon();
 					shell.dispose();
 					gc.open();					
 				}

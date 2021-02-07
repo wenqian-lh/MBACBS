@@ -14,7 +14,7 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 
 import com.nine.dao.DBHelper;
-import com.nine.util.myUtil;
+import com.nine.util.MyUtil;
 
 import org.eclipse.swt.custom.TableCursor;
 import org.eclipse.swt.graphics.Image;
@@ -35,7 +35,7 @@ public class Dropgg {
 	protected Shell shell;
 	private Table table;
 	private DBHelper db= new DBHelper();
-	private myUtil mu = new myUtil();
+	private MyUtil mu = new MyUtil();
 
 	/**
 	 * Launch the application.
@@ -70,7 +70,7 @@ public class Dropgg {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setBackgroundImage(SWTResourceManager.getImage(Dropgg.class, "/images/background.jpg"));
 		shell.setSize(666, 438);
 		shell.setText("删除公告");

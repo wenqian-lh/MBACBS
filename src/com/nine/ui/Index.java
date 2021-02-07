@@ -12,7 +12,7 @@ import org.eclipse.swt.widgets.Shell;
 import com.ibm.icu.text.SimpleDateFormat;
 import com.nine.dao.DBHelper;
 import com.nine.util.Data;
-import com.nine.util.myUtil;
+import com.nine.util.MyUtil;
 import org.eclipse.wb.swt.SWTResourceManager;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
@@ -63,7 +63,7 @@ public class Index {
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	
 	private StackLayout stackLayout = new StackLayout();
-	myUtil mu = new myUtil();
+	MyUtil mu = new MyUtil();
 	DBHelper db = new DBHelper();
 	
 	String sql1 = "select * from shang";
@@ -110,7 +110,7 @@ public class Index {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setBackgroundImage(SWTResourceManager.getImage(Index.class, "/images/background_6.jpg"));
 		shell.setSize(1000, 730);
 		shell.setText("博物院藏品浏览和订票系统");
@@ -419,7 +419,7 @@ public class Index {
 		label_12.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				dp d = new dp();
+				Dp d = new Dp();
 				d.open();
 			}
 		});
@@ -428,7 +428,7 @@ public class Index {
 		label_31.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				showCangpin1 scp = new showCangpin1();
+				ShowCangpin1 scp = new ShowCangpin1();
 				scp.open();
 			}
 		});
@@ -692,7 +692,7 @@ public class Index {
 				label_3.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseDown(MouseEvent e) {
-						showCangpin1 cp = new showCangpin1();
+						ShowCangpin1 cp = new ShowCangpin1();
 						cp.open();
 					}
 				});
@@ -700,7 +700,7 @@ public class Index {
 				label_5.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseDown(MouseEvent e) {
-						dp d = new dp();
+						Dp d = new Dp();
 						d.open();
 					}
 				});
@@ -709,7 +709,7 @@ public class Index {
 				label_4.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseDown(MouseEvent e) {
-						about ab = new about();
+						About ab = new About();
 						ab.open();
 					}
 				});
@@ -718,7 +718,7 @@ public class Index {
 				link.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseDown(MouseEvent e) {
-						ggxq gg = new ggxq();
+						Ggxq gg = new Ggxq();
 						gg.open();
 					}
 				});

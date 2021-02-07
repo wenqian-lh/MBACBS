@@ -58,7 +58,7 @@ public class Daolan {
 	protected void createContents() {
 		shell = new Shell();
 		shell.setSize(1000, 730);
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setBackgroundMode(SWT.INHERIT_FORCE);
 		shell.setText("导览");
 		shell.setLayout(new FillLayout(SWT.HORIZONTAL));

@@ -74,7 +74,7 @@ public class Login1 {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setFont(SWTResourceManager.getFont("楷体", 12, SWT.BOLD));
 		shell.setBackgroundMode(SWT.INHERIT_FORCE);
 		shell.setBackgroundImage(SWTResourceManager.getImage(Login1.class, "/images/background.jpg"));

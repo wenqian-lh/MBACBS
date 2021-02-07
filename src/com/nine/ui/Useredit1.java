@@ -22,7 +22,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import com.nine.dao.DBHelper;
 import com.nine.util.Data;
-import com.nine.util.myUtil;
+import com.nine.util.MyUtil;
 
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
@@ -45,7 +45,7 @@ public class Useredit1 {
 	private StackLayout stackLayout = new StackLayout();
 	DBHelper db = new DBHelper();
 	private Label lblNewLabel_1;
-	myUtil mu = new myUtil();
+	MyUtil mu = new MyUtil();
 	private Text text_1;
 	private Text text_2;
 	private Text text_3;
@@ -92,7 +92,7 @@ public class Useredit1 {
 		shell = new Shell();
 		shell.setSize(761, 474);
 		shell.setText("编辑资料");
-		shell.setImage(SWTResourceManager.getImage(about.class, "/images/icon.jpg"));
+		shell.setImage(SWTResourceManager.getImage(About.class, "/images/icon.jpg"));
 		shell.setLayout(new FillLayout(SWT.HORIZONTAL));
 
 		Composite composite = new Composite(shell, SWT.NONE);
